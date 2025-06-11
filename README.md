@@ -19,24 +19,24 @@
     </a>
 </p>
 
-# Create Sidebar and Simple CRUD in Laravel Filament v3 (Step-by-Step)
+# Project-Task Relationship with Sidebar Navigation in Laravel Filament v3 (Step-by-Step)
 
-This repository demonstrates a clean and modern way to build an **admin dashboard with sidebar and CRUD functionality** using **Laravel Filament v3**. With minimal setup, you'll get a full-featured backend panel powered by Livewire and TailwindCSS.
+This repository demonstrates how to build a fully functional **Project-Task relationship** with a sidebar navigation using **Laravel Filament v3**. Perfect for task management systems, CRMs, or project dashboards.
 
 ---
 
 ## ✨ Features
 
-- Laravel Filament v3 installation
-- Responsive admin dashboard at `/admin`
-- Sidebar navigation with grouped links and icons
-- Simple CRUD for `Project` model with:
-  - Searchable table
-  - Create/Edit/Delete actions
-  - Custom form and table columns
+- Laravel Filament v3 installation and setup
+- Sidebar navigation with icons and grouped resources
+- CRUD functionality for:
+  - Project
+  - Task (linked to Project)
+- One-to-many relationship between Project and Task
+- Resource pages for Create, Edit, and List
+- Relationship-aware dropdowns for linking Tasks to Projects
 - Dark mode support
-- "Create & Create Another" button disabled
-- Lightweight and fully extendable
+- Clean and extendable codebase
 
 ---
 
@@ -46,32 +46,34 @@ This repository demonstrates a clean and modern way to build an **admin dashboar
 - Filament v3
 - TailwindCSS
 - Livewire
-- Blade Components
+- Eloquent Relationships
 
 ---
 
 ## 📝 Blog Tutorial
 
-Read the complete step-by-step blog here:
+Read the full step-by-step implementation guide:
 
-👉 [How to Create a Sidebar and Simple CRUD in Laravel Filament v3 - CodeHunger](https://www.codehunger.in/blog/how-to-create-a-sidebar-and-simple-crud-in-laravel-filament-v3-step-by-step-guide)
+👉 [How to Build a Project-Task Relationship with Sidebar Navigation in Laravel Filament v3](https://www.codehunger.in/blog/how-to-build-a-project-task-relationship-with-sidebar-navigation-in-laravel-filament-v3-step-by-step-guide)
 
 ---
 
 ## 📂 Folder Structure
 
-- `app/Models/Project.php` – Eloquent model
-- `app/Filament/Resources/ProjectResource.php` – CRUD definition
-- `app/Filament/Resources/ProjectResource/Pages` – Create/Edit/List pages
-- `resources/views/` – Blade templates for UI (if needed)
-- `routes/web.php` – Web routes (Laravel default)
-- `.env` – Environment configuration
+- `app/Models/Project.php` – Eloquent model for projects
+- `app/Models/Task.php` – Eloquent model for tasks
+- `app/Filament/Resources/ProjectResource.php` – Project CRUD resource
+- `app/Filament/Resources/TaskResource.php` – Task CRUD resource
+- `app/Filament/Resources/TaskResource/Pages` – Pages for listing, creating, and editing tasks
+- `resources/views/` – Optional Blade view overrides
+- `routes/web.php` – Laravel routes (default)
+- `.env` – Environment config for database
 
 ---
 
 ## ⚙️ Setup Instructions
 
-1. Clone this repo:
+1. Clone the repo:
 ```bash
-git clone https://github.com/your-username/filament-crud-demo.git
-cd filament-crud-demo
+git clone https://github.com/your-username/project-task-filament.git
+cd project-task-filament
